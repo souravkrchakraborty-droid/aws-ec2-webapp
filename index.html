@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Character set -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive display -->
-    <title>Basic HTML Template</title>
+  <meta charset="UTF-8">
+  <title>Sourav | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Header section -->
-    <header>
-        <h1>Welcome to My First Web Page</h1>
-    </header>
+<header>
+  <h1>Sourav Kumar</h1>
+  <p>Web Developer | Learner</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <!-- Main content -->
-    <section>
-        <h2>Introduction</h2>
-        <p>This is a simple web page designed to demonstrate the basics of HTML. It includes text, a form, a table, an image, and a link.</p>
-    </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am learning web development and building real-world projects.</p>
+</section>
 
-    <!-- Registration Form -->
-    <section>
-        <h2>Registration Form</h2>
-        <form action="#" method="post">
-            <label for="full-name">Full Name:</label><br>
-            <input type="text" id="full-name" name="full-name" required><br><br>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>AWS EC2 Web App</h3>
+    <p>This project is hosted on GitHub Pages.</p>
+  </div>
+</section>
 
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your-email@example.com</p>
+  <button onclick="alert('Thanks for visiting!')">Say Hello</button>
+</section>
 
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" required><br><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <input type="submit" value="Register">
-        </form>
-    </section>
-
-    <!-- User Information Table -->
-    <section>
-        <h2>User Information Table</h2>
-        <table style border="1">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>john@gmail.com</td>
-                <td>+123456789</td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td>jane@gmail.com</td>
-                <td>+54 798 533 665</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- Image -->
-    <section>
-        <h2>Sample Image</h2>
-        <img src="https://tse3.mm.bing.net/th/id/OIP.XEVySEbxw-4iDmSXLsd8NgHaDt?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Web Development">
-    </section>
-
-    <!-- External Link -->
-    <section>
-        <h2>External Link</h2>
-        <p>Visit <a href="https://google.com" target="_blank">Google</a> for more information.</p>
-    </section>
+<footer>
+  <p>© 2026 Sourav</p>
+</footer>
 
 </body>
 </html>
