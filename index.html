@@ -62,33 +62,95 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav a:hover {
+      color: white;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+      transition: 0.3s;
+    }
+
+    header {
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #skills p {
+        display: inline-block;
+        background: #38bdf8;
+        color: black;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Sourav Kumar</h1>
-  <p>Web Developer | Learner</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Hi, I'm Sourav 👋</h1>
+    <p>I build modern websites and learn full-stack development</p>
+    <img src="https://via.placeholder.com/120" alt="profile" style="border-radius:50%; margin-top:15px;">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  
+    <br>
+    <button onclick="document.getElementById('projects').scrollIntoView()">
+      View My Work ↓
+    </button>
 
+    <div class="card">
+        <h3>AWS EC2 Web App</h3>
+        <p>Deployed using GitHub Pages. Learned Git, deployment, and hosting.</p>
+        <a href="https://souravkrchakraborty-droid.github.io/aws-ec2-webapp/" target="_blank">
+          Live Demo
+        </a>
+      </div>
+  </header>
+
+  
 <section id="about">
   <h2>About Me</h2>
   <p>I am learning web development and building real-world projects.</p>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="card">
-    <h3>AWS EC2 Web App</h3>
-    <p>This project is hosted on GitHub Pages.</p>
-  </div>
-</section>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>JavaScript</p>
+      <p>Git & GitHub</p>
+    </div>
+  </section>
 
 <section id="contact">
   <h2>Contact</h2>
