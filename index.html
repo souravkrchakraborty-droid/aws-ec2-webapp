@@ -121,7 +121,49 @@
             padding: 30px;
             color: #94a3b8;
         }
+
+        .light-mode {
+            background: #f1f5f9;
+            color: black;
+        }
+
+        .light-mode .card {
+            background: rgba(0,0,0,0.05);
+        }
+
+        .light-mode nav a {
+            color: #0f172a;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width: 768px) {
+
+                header h1 {
+                    font-size: 2.5rem;
+                }
+
+                nav a {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                section {
+                    padding: 50px 20px;
+                }
+
+            }
   </style>
+
 </head>
 
 <body>
@@ -130,6 +172,8 @@
       <h1>Hi, I'm Sourav 👋</h1>
     
       <p>Frontend Developer | Learning Full Stack Development</p>
+
+      <h3 id="typing"></h3>
     
       <img src="https://img.magnific.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?semt=ais_hybrid&w=740&q=80" class="profile">
     
@@ -143,9 +187,10 @@
       <button onclick="document.getElementById('projects').scrollIntoView()">
         View Projects ↓
       </button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
     </header>
     
-    <section id="about">
+    <section id="about" class="fade-in">
       <h2>About Me</h2>
     
       <div class="card">
@@ -156,7 +201,7 @@
       </div>
     </section>
     
-    <section id="skills">
+    <section id="skills" class="fade-in">
       <h2>Skills</h2>
     
       <div class="card">
@@ -168,7 +213,7 @@
       </div>
     </section>
     
-    <section id="projects">
+    <section id="projects" class="fade-in">
       <h2>Projects</h2>
     
       <div class="card">
@@ -187,7 +232,7 @@
       </div>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="fade-in">
       <h2>Contact</h2>
     
       <div class="card">
@@ -207,3 +252,34 @@
     
     </body>
 </html>
+
+<script>
+    const text = "Building modern and responsive websites...";
+    let index = 0;
+    
+    function typeEffect() {
+      if(index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 70);
+      }
+    }
+    
+    typeEffect();
+
+    function toggleTheme() {
+        document.body.classList.toggle("light-mode");
+    }
+
+    const faders = document.querySelectorAll('.fade-in');
+
+        window.addEventListener('scroll', () => {
+        faders.forEach(fader => {
+            const top = fader.getBoundingClientRect().top;
+
+            if(top < window.innerHeight - 100) {
+            fader.classList.add('show');
+            }
+        });
+    });
+</script>
